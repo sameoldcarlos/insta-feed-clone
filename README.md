@@ -1,5 +1,5 @@
 # insta-feed-clone
-On this project, I challenged myseld to code an Instagram Feed Clone with infinite scroll, using only HTML, CSS and Javascript (No Frameworks or libraries).
+On this project, I challenged myself to code an Instagram Feed Clone with infinite scroll, using only HTML, CSS and Javascript (No Frameworks or libraries).
 
 
 ## Generating users
