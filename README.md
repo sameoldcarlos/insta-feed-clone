@@ -25,3 +25,6 @@ On this project the following functions are available:
 4. Access the "Three dots" menu;
 5. Slide pictures through arrows and touchscreen;
 6. Infinite scroll;
+![image](https://user-images.githubusercontent.com/7574584/134112620-43d93d6c-3d81-4ba8-9b26-c7ae4b63ed35.png)
+![image](https://user-images.githubusercontent.com/7574584/134112745-0661636f-6a18-4ffa-9c9d-5830d7902435.png)
+![image](https://user-images.githubusercontent.com/7574584/134112797-878198ae-4472-4349-ba2a-7e54a1027edb.png)
