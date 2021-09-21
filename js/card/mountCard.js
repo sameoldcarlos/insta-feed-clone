@@ -1,7 +1,7 @@
 const mountCard = (cardObj) => {
     const story = cardObj.story ? " circlestory--active" : "";
     let images = ``;
-    const imagesWidth = 100/cardObj.photos.length;
+    const imagesWidth = 100 / cardObj.photos.length;
     (cardObj.photos).forEach((photo) => {
         images = `${images}
         <img class="cardcontent__image" src=${photo} alt="" style="width: ${imagesWidth}%;">
@@ -9,11 +9,11 @@ const mountCard = (cardObj) => {
     });
     let dots = ``;
     let buttonNext = `<button class="slideswitcher slideswitcher--next slideswitcher--hide" id="plus"></button>`
-    if((cardObj.photos).length>1){
+    if ((cardObj.photos).length > 1) {
         buttonNext = `<button class="slideswitcher slideswitcher--next" id="plus"></button>`
         dots = `<div class="dot dot--active"></div>`
-        for(let i=0; i<((cardObj.photos).length-1); i++){
-        dots = `${dots}        
+        for (let i = 0; i < ((cardObj.photos).length - 1); i++) {
+            dots = `${dots}        
         <div class="dot"></div>
         `}
     }
@@ -37,7 +37,7 @@ const mountCard = (cardObj) => {
                 ${buttonNext}
                 <div class="like-container"><span class="like-icon like-icon--big"></span></div>
                 <div class="cardcontent">
-                    <div class="cardcarousel" style="width: ${100*cardObj.photos.length}%;">
+                    <div class="cardcarousel" style="width: ${100 * cardObj.photos.length}%;">
                         ${images}
                     </div>
                 </div>

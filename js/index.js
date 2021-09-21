@@ -8,14 +8,14 @@ window.onload = async () => {
     const $moreOptionsContainer = document.querySelector("#moreoptionscontainer");
     const $moreOptionsPanel = document.querySelector("#moreoptionspanel");
     const $content = document.querySelector(".content");
-    const $cancelOption = document.querySelectorAll(".followingoption")[document.querySelectorAll(".followingoption").length-1];
-    
+    const $cancelOption = document.querySelectorAll(".followingoption")[document.querySelectorAll(".followingoption").length - 1];
+
     const cardContainer = document.querySelector(".card-container");
     const picturesGlobalList = [];
     const listPics = await requestPictures();
     listPics.forEach((picture) => picturesGlobalList.push(picture));
     const users = await prepareUsers(80);
-        
+
     const feed = (numCards) => {
         const cardsList = prepareCards(numCards, users, picturesGlobalList);
         cardsList.forEach((card) => {
@@ -34,28 +34,27 @@ window.onload = async () => {
 
     window.addEventListener('scroll', async () => {
         if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
-            if(picturesGlobalList.length <= 20) {
+            if (picturesGlobalList.length <= 20) {
                 let listPics = await requestPictures();
                 listPics.forEach((picture) => picturesGlobalList.push(picture));
             }
             feed(5);
-            
-        }  
+        }
     });
 
-    $cancelOption.addEventListener("click", function() {
+    $cancelOption.addEventListener("click", function () {
         hideMoreOptionsPanel();
     });
 
-    $moreOptionsPanel.addEventListener('click', function(event) {
+    $moreOptionsPanel.addEventListener('click', function (event) {
         let isClickInsideElement = $moreOptionsContainer.contains(event.target);
         if (!isClickInsideElement) {
             hideMoreOptionsPanel();
         }
     });
-    
-    function showMoreOptionsPanel() {          
-        $moreOptionsPanel.classList.add("moreoptionspanel--visible");            
+
+    function showMoreOptionsPanel() {
+        $moreOptionsPanel.classList.add("moreoptionspanel--visible");
         $content.classList.add("content--inactive");
 
         const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
@@ -64,7 +63,7 @@ window.onload = async () => {
         $body.style.top = `-${scrollY}`;
 
     }
-    
+
     function hideMoreOptionsPanel() {
         const $body = document.body;
         const scrollY = $body.style.top;
