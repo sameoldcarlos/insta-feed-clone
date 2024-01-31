@@ -6,7 +6,7 @@ const newUser = (rawUser, dividers) => {
     const middle = dividers[getRandomIntInclusive(0, dividers.length - 2)];
     const prefix = dividers[getRandomIntInclusive(0, dividers.length - 1)];
     const sufix = sufixes[getRandomIntInclusive(0, sufixes.length - 1)];
-    
+
     const {name: {first, last}, picture: {thumbnail}, gender} = rawUser;
     const username = `${prefix}${first}${middle}${last}${sufix}`;
 
@@ -18,7 +18,7 @@ const newUser = (rawUser, dividers) => {
     };
 
     return user;
-        
+
 }
 
 export default newUser;
