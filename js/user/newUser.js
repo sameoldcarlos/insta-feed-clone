@@ -7,10 +7,8 @@ const newUser = (rawUser, dividers) => {
     const prefix = dividers[getRandomIntInclusive(0, dividers.length - 1)];
     const sufix = sufixes[getRandomIntInclusive(0, sufixes.length - 1)];
     
-    const rawUserName = rawUser.email.split("@")[0];
-    const firstName = rawUserName.split(".")[0];
-    const lastName = rawUserName.split(".")[1];
-    const username = `${prefix}${firstName}${middle}${lastName}${sufix}`;
+    const {name: {first, last}} = rawUser;
+    const username = `${prefix}${first}${middle}${last}${sufix}`;
 
     const user = {
         username: username,
