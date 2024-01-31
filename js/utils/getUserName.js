@@ -2,7 +2,7 @@ import getRandomIntInclusive from "../utils/getRandomIntInclusive.js";
 
 const dividers = ["", "_", "."];
 
-const normalizedText = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
+const normalizedText = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/ /g, '');
 
 function getUserName(firstName, lastName) {
 	const sufixes = ["", `${getRandomIntInclusive(0, 9)}${getRandomIntInclusive(0, 9)}`];
