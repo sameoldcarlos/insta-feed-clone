@@ -3,9 +3,7 @@ On this project, I challenged myself to code an Instagram Feed Clone with infini
 
 
 ## Generating users
-To create fictional users, I used two different APIs:
-Fisrt of them was [FakeFace API](http://fakeface.rest/), which allowed me to use artificially created profile pictures.
-Then I used Random [User Generator API](https://randomuser.me/) to generate random data, like username and gender.
+To create fictional users, I used [Random User Generator API](https://randomuser.me/) to generate random data, like username, gender and profile pic.
 
 
 ## Generating posts
